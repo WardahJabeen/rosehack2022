@@ -1,0 +1,24 @@
+class Sink {
+    constructor(){
+        this._sink_rate = 1;
+        this._sink_unit = "Metric Cup";
+    }
+
+    // getter
+    get_sink_rate(){
+        return this._sink_rate;
+    }
+    get_sink_unit(){
+        return this._sink_unit;
+    }
+    // setter
+    set_sink_rate(new_rate){
+        this._sink_rate = new_rate;
+    }
+    set_sink_unit(new_unit){
+        this._sink_unit = new_unit;
+    }
+    
+}
+
+// Timer
