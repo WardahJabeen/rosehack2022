@@ -40,12 +40,14 @@ function check_time(){
 
 // Button Actions for Calibration
 button_start_c.onclick = function(){
+    document.getElementById("cupImg").src="assets/water.gif";
     start_time_c = Date.now(); 
     console.log("Started Timer")
     // interval = setInterval(check_time(), 1000);
 } // Updates ~every second
 
 button_stop_c.onclick = function(){
+    document.getElementById("cupImg").src="assets/before.png";
     var Change = Date.now() - start_time_c;
     Time_Elapsed_c = Math.floor(Change / 1000);
     console.log("Time Elapsed: ", Time_Elapsed_c);
@@ -97,5 +99,6 @@ button_confirm_t.onclick = function(){
     var water_consumption = sink_rate * Time_Elapsed_t;
     var msg_1 = "You have consumed "
     var msg_2 = " Metric Cup(s) of water."
-    console.log(msg_1 + water_consumption + msg_2);
+    document.getElementById("TotalWaterConsumption").innerHTML = (msg_1 + water_consumption + msg_2);
+    
 }
