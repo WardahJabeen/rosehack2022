@@ -62,9 +62,9 @@ button_confirm_c.onclick = function(){
 }
 /* ---------------------    TIME    ------------------------ */
 // Timer Buttons
-var button_start = document.getElementById("start_t");
-var button_stop = document.getElementById("stop_t");
-var button_confirm = document.getElementById("confirm_t");
+var button_start_t = document.getElementById("start_t");
+var button_stop_t = document.getElementById("stop_t");
+var button_confirm_t = document.getElementById("confirm_t");
 
 // Variables
 var start_time_t;
@@ -82,7 +82,7 @@ button_start_t.onclick = function(){
     // interval = setInterval(check_time(), 1000);
 } // Updates ~every second
 
-button_stop.onclick = function(){
+button_stop_t.onclick = function(){
     var Change = Date.now() - start_time_t;
     Time_Elapsed_t = Math.floor(Change / 1000);
     console.log("Time Elapsed: ", Time_Elapsed_t);
