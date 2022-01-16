@@ -40,7 +40,8 @@ function check_time(){
 // Button Actions
 button_start.onclick = function(){
     start_time = Date.now(); 
-    console.log("Started Timer")
+    console.log("Started Timer");
+    document.getElementById("cupImg").src="assets/water.gif";
     // interval = setInterval(check_time(), 1000);
 } // Updates ~every second
 
