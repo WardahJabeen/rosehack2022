@@ -55,7 +55,7 @@ button_stop.onclick = function(){
 button_confirm.onclick = function(){
     if(!isNaN(rate)){
         var sink_rate = rate;
-        export {sink_rate}
+        export {sink_rate};
     }
     console.log('confirmed');
     var msg = "Sink Rate:"
