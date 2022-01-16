@@ -2,7 +2,7 @@
 body {
   background: linear-gradient(#6cdac4, #99a1f5) fixed;
   margin: 2%;
-  font-family: Monomaniac One;
+  font-family: 'Alumni Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -10,13 +10,17 @@ body {
   align-items: center;
   text-align: center;
 }
+@font-face {
+  font-family: 'Alumni Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300&display=swap');
+}
 
 /* WATER WASTE - The title of the page will always be the title of the app */
 h1 {
   top: 27.22%;
   bottom: 48.43%;
 
-  font-family: Monomaniac One;
+  font-family: 'Alumni Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 100px;
@@ -31,7 +35,7 @@ h3 {
   top: 27.22%;
   bottom: 48.43%;
 
-  font-family: Monomaniac One;
+  font-family: 'Alumni Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
