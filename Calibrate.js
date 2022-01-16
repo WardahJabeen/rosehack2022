@@ -1,25 +1,25 @@
-class Sink {
-    constructor(sink_rate, sink_unit){
-        this._sink_rate = sink_rate;
-        this._sink_unit = sink_unit;
-    }
+// class Sink {
+//     constructor(sink_rate, sink_unit){
+//         this._sink_rate = sink_rate;
+//         this._sink_unit = sink_unit;
+//     }
 
-    // getter
-    get_sink_rate(){
-        return this._sink_rate;
-    }
-    get_sink_unit(){
-        return this._sink_unit;
-    }
-    // setter
-    set_sink_rate(new_rate){
-        this._sink_rate = new_rate;
-    }
-    set_sink_unit(new_unit){
-        this._sink_unit = new_unit;
-    }
+//     // getter
+//     get_sink_rate(){
+//         return this._sink_rate;
+//     }
+//     get_sink_unit(){
+//         return this._sink_unit;
+//     }
+//     // setter
+//     set_sink_rate(new_rate){
+//         this._sink_rate = new_rate;
+//     }
+//     set_sink_unit(new_unit){
+//         this._sink_unit = new_unit;
+//     }
     
-}
+// }
 
 // Timer Buttons
 var button_start = document.getElementById("start");
@@ -54,9 +54,10 @@ button_stop.onclick = function(){
 
 button_confirm.onclick = function(){
     if(!isNaN(rate)){
-        var new_sink = new Sink(rate, "Metric Cup");
+        var sink_rate = rate;
+        export {sink_rate}
     }
     console.log('confirmed');
     var msg = "Sink Rate:"
-    document.getElementById("water rate").innerHTML = msg + new_sink.get_sink_rate();
+    document.getElementById("water rate").innerHTML = msg + sink_rate;
 }
