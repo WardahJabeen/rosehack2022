@@ -30,6 +30,7 @@ var button_confirm_c = document.getElementById("confirm_c");
 var start_time_c;
 var Time_Elapsed_c;
 var rate;
+var sink_rate;
 
 function check_time(){
     var Change = Date.now() - start_time_c;
@@ -40,8 +41,7 @@ function check_time(){
 // Button Actions for Calibration
 button_start_c.onclick = function(){
     start_time_c = Date.now(); 
-    console.log("Started Timer") 
-   document.getElementById("cupImg").src="assets/water.gif";
+    console.log("Started Timer")
     // interval = setInterval(check_time(), 1000);
 } // Updates ~every second
 
@@ -50,15 +50,16 @@ button_stop_c.onclick = function(){
     Time_Elapsed_c = Math.floor(Change / 1000);
     console.log("Time Elapsed: ", Time_Elapsed_c);
     rate = (1/Time_Elapsed_c);
-    rate = rate.toFixed();
+    rate = Math.round(rate*100)/100;
+    console.log(rate);
 };
 
 button_confirm_c.onclick = function(){
     if(!isNaN(rate)){
-        var sink_rate = rate;
+        sink_rate = rate;
     }
-    console.log('confirmed');
-    var msg = "Sink Rate:"
+    var msg = "Sink Rate is "
+    console.log(msg + sink_rate);
     //document.getElementById("water rate").innerHTML = msg + sink_rate;
 }
 /* ---------------------    TIME    ------------------------ */
@@ -91,6 +92,10 @@ button_stop_t.onclick = function(){
     console.log(Time_Elapsed_t);
 };
 
-// Calculating Water Consumption
-var water_consumption = sink_rate * Time_Elapsed_t;
-console.log(water_consumption);
+button_confirm_t.onclick = function(){
+    // Calculating Water Consumption
+    var water_consumption = sink_rate * Time_Elapsed_t;
+    var msg_1 = "You have consumed "
+    var msg_2 = " Metric Cup(s) of water."
+    console.log(msg_1 + water_consumption + msg_2);
+}
