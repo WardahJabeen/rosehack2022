@@ -6,7 +6,7 @@ var button_confirm = document.getElementById("confirm");
 // Variables
 var start_time;
 var Time_Elapsed;
-import {sink_rate} from "./Calibrate";
+import {sink_rate} from "./Calibrate.mjs";
 function check_time(){
     var Change = Date.now() - start_time;
     Time_Elapsed = Math.floor(Change / 1000);
