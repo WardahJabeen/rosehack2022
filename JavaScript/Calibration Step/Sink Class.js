@@ -21,4 +21,12 @@ class Sink {
     
 }
 
-// Timer
+// Timer will utilise Date() to measure an accurate elapsed time through difference between start & end. 
+
+var start_time = Date.now();
+function check_time(){
+    var Change = Date.now() - start_time;
+    console.log(math.floor(Change / 1000));
+}
+
+setInterval(check_time(), 1000); // Updates ~every second
